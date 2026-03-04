@@ -59,6 +59,37 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     };
 
+    // ─── Cart Logic ──────────────────────────────────────────
+    let cartCount = 0;
+    const cartBadge = document.querySelector('.cart-badge-circle');
+    const addToCartBtns = document.querySelectorAll('.add-to-cart');
+
+    const updateCart = () => {
+        cartCount++;
+        if (cartBadge) {
+            cartBadge.textContent = cartCount;
+            cartBadge.style.transform = 'scale(1.2)';
+            setTimeout(() => cartBadge.style.transform = 'scale(1)', 200);
+        }
+    };
+
+    addToCartBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            updateCart();
+            // Optional: show a small toast or change button text
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Added! ✓';
+            btn.style.backgroundColor = 'var(--color-primary-green)';
+            btn.style.color = 'white';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.backgroundColor = '';
+                btn.style.color = '';
+            }, 1000);
+        });
+    });
+
     const closeAll = () => {
         closeModal(cartOverlay);
         closeModal(mobileMenu);
@@ -74,18 +105,33 @@ document.addEventListener('DOMContentLoaded', () => {
     closeCartBtn.addEventListener('click', () => closeModal(cartOverlay));
     document.querySelector('.close-cart-cta')?.addEventListener('click', () => closeModal(cartOverlay));
 
-    // ─── Search ───────────────────────────────────────────────
+    // ─── Search Functionality ─────────────────────────────────
+    const searchInput = searchOverlay.querySelector('.search-input');
     openSearchBtn.addEventListener('click', () => {
         searchOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
-        // Auto-focus
-        setTimeout(() => {
-            searchOverlay.querySelector('.search-input')?.focus();
-        }, 300);
+        setTimeout(() => searchInput?.focus(), 300);
     });
+
+    searchInput?.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        // search logic: filter fav-cards and categories titles
+        const searchItems = document.querySelectorAll('.product-title, .card-title, .value-title');
+        searchItems.forEach(item => {
+            const parent = item.closest('.product-card, .category-card, .value-card');
+            if (item.textContent.toLowerCase().includes(query)) {
+                if (parent) parent.style.display = '';
+            } else {
+                if (parent) parent.style.display = query.length > 2 ? 'none' : '';
+            }
+        });
+    });
+
     closeSearchBtn.addEventListener('click', () => {
         searchOverlay.classList.remove('active');
         document.body.style.overflow = '';
+        // Reset visibility
+        document.querySelectorAll('.product-card, .category-card, .value-card').forEach(el => el.style.display = '');
     });
     // Close search on Escape
     document.addEventListener('keydown', (e) => {
