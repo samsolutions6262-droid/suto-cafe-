@@ -956,7 +956,7 @@ button {
 }
 
 .hero-full-image {
-    width: 100vw;
+    width: 100%;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -1044,7 +1044,7 @@ button {
     display: flex;
     overflow: hidden;
     user-select: none;
-    width: 100vw;
+    width: 100%;
 }
 
 .marquee-content {
