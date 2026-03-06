@@ -1,0 +1,444 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Suto Cafe</title>
+    <meta name="description"
+        content="View the premium menu at Suto Cafe. From thick cold coffee and mojitos to pizzas and waffles.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Symbols Outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="menu-page-body">
+
+    <!-- Site Overlay -->
+    <div class="site-overlay" id="siteOverlay"></div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <button class="close-btn" id="closeSearch">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="search-container">
+            <h3 class="search-title">What are you craving?</h3>
+            <input type="text" placeholder="Search our menu... (e.g. pizza, coffee)" class="search-input"
+                autocomplete="off">
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-btn" id="closeCart">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="cart-body">
+            <div class="empty-state">
+                <span class="material-symbols-outlined large-icon">shopping_cart</span>
+                <p>Your cart is empty! Order something delicious.</p>
+                <button class="btn btn-primary close-cart-cta">Browse Menu</button>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal">
+                <span>Subtotal</span>
+                <span>&#8377;0</span>
+            </div>
+            <a href="menu.html" class="btn btn-primary full-width"
+                style="text-decoration:none; text-align:center;">Browse Menu</a>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="menu.html" class="nav-link active">Menu</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="review.html" class="nav-link">Review Us</a>
+            </div>
+
+            <a href="index.html" class="logo center-logo">
+                <div class="logo-top">SUTO <span class="star-symbol">&#10042;</span></div>
+                <div class="logo-bottom">& CAFE</div>
+            </a>
+
+            <div class="nav-right">
+                <div class="nav-actions">
+                    <button class="icon-circle-btn" id="openSearch">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                    <!-- Instead of scrolling, Order now adds the visual logic to cart if needed, or goes to Menu -->
+                    <button class="icon-circle-btn cart-btn-circle" id="openCart">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                        <span class="cart-badge-circle">0</span>
+                    </button>
+                </div>
+
+                <button class="hamburger-new" id="hamburger">
+                    <span class="hamburger-lines">
+                        <span></span>
+                        <span></span>
+                    </span>
+                    Menu
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">SUTO &#10042; CAFE</div>
+            <button class="close-btn" id="closeMobileMenu">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="index.html#reviews">Reviews</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="review.html">Leave a Review &#9733;</a>
+        </div>
+        <div class="mobile-social">
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://wa.me/919663257373" target="_blank">WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Menu Hero -->
+    <section class="menu-hero">
+        <div class="menu-hero-content fade-up">
+            <span class="star-symbol">&#10042;</span>
+            <h1 class="page-title">Our Menu</h1>
+            <p class="page-subtitle">Premium Flavors, Crafted with Passion.</p>
+        </div>
+    </section>
+
+    <!-- Main Menu Content -->
+    <main class="full-menu section container">
+        <p class="taxes-notice align-center fade-up">* Taxes are applicable as per government norms.</p>
+
+        <div class="menu-grid">
+
+            <!-- PIZZA -->
+            <div class="menu-section fade-up">
+                <h2 class="menu-section-title">PIZZA (8") <span><span
+                            class="material-symbols-outlined large-icon">local_pizza</span></span></h2>
+                <div class="menu-items-list">
+                    <div class="menu-item-row">
+                        <span class="item-name">Pizza Margherita</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;165</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Farm Fresh Pizza</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;200</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Veggie Overload</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;185</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Golden Cheese Corn</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;185</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">5 Pepper Pizza</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;199</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Paneer Peprika Pizza</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;249</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DESSERT -->
+            <div class="menu-section fade-up" style="transition-delay: 0.1s;">
+                <h2 class="menu-section-title">DESSERT <span><span
+                            class="material-symbols-outlined large-icon">icecream</span></span></h2>
+
+                <h3 class="menu-subsection-title">Waffles</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item-row">
+                        <span class="item-name">Classic Waffles</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;119</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Chocolate Waffles</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;129</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Brownie Waffles</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;149</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Hot Kitkat Waffles</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;149</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Nutella Waffles</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;159</span>
+                    </div>
+                </div>
+
+                <h3 class="menu-subsection-title mt-2">Add On</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item-row">
+                        <span class="item-name">Chocolate</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;30</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Ice Cream Scoop</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;30</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Dark Chocolate</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;30</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOCKTAILS & MOJITO -->
+            <div class="menu-section fade-up">
+                <h2 class="menu-section-title">MOCKTAILS & MOJITO (350ML) <span><span
+                            class="material-symbols-outlined large-icon">local_bar</span></span></h2>
+                <div class="menu-items-list">
+                    <div class="menu-item-row">
+                        <span class="item-name">Virgin Mojito</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;129</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Blue Blast</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;139</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Kala Khatta Mojito</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;139</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Blue Berry Mojito</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;159</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Kiwi Mojito</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;159</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Watermelon Mojito</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;139</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Strawberry Mojito</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;139</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Green Apple Mojito</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;139</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Black Bloody Mary Mocktail</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;139</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Watermelon Basil Mojito</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;129</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">200 HP</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;249</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUTO COFFEE -->
+            <div class="menu-section fade-up" style="transition-delay: 0.1s;">
+                <h2 class="menu-section-title">SUTO COFFEE <span><span
+                            class="material-symbols-outlined large-icon">coffee</span></span></h2>
+
+                <h3 class="menu-subsection-title">Coffee With Air</h3>
+                <div class="menu-items-list">
+                    <div class="menu-item-row">
+                        <span class="item-name">Espresso With Tonic (Cranberry / Orange / Mint)</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;219</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Cold Brew With Tonic (Cranberry / Orange / Mint)</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;219</span>
+                    </div>
+                    <div class="menu-item-row">
+                        <span class="item-name">Cola Espresso</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">&#8377;219</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMBOS -->
+            <div class="menu-section fade-up combos-section">
+                <h2 class="menu-section-title" style="border-bottom: none;">CAF&Eacute; COMBOS <span><span
+                            class="material-symbols-outlined large-icon">restaurant_menu</span></span></h2>
+
+                <div class="grid-2-inner">
+                    <div class="combo-item">
+                        <div class="combo-header">
+                            <span class="combo-name">Aloo Tikki Combo</span>
+                            <span class="item-price">&#8377;149</span>
+                        </div>
+                        <p class="combo-includes">Aloo Tikki Burger + Thick Cold Coffee</p>
+                    </div>
+
+                    <div class="combo-item">
+                        <div class="combo-header">
+                            <span class="combo-name">Indori Combo</span>
+                            <span class="item-price">&#8377;209</span>
+                        </div>
+                        <p class="combo-includes">Indori Masala Wrap + Peri Peri Fries</p>
+                    </div>
+
+                    <div class="combo-item">
+                        <div class="combo-header">
+                            <span class="combo-name">Sandwich Combo</span>
+                            <span class="item-price">&#8377;279</span>
+                        </div>
+                        <p class="combo-includes">Cheese Chutney Bliss + Classic Garlic Bread + Mango Slush</p>
+                    </div>
+
+                    <div class="combo-item">
+                        <div class="combo-header">
+                            <span class="combo-name">Sandwich Combo 2</span>
+                            <span class="item-price">&#8377;289</span>
+                        </div>
+                        <p class="combo-includes">Fusion Veggie Wrap + French Fries + Brownie W/ Choco Sauce</p>
+                    </div>
+
+                    <div class="combo-item">
+                        <div class="combo-header">
+                            <span class="combo-name">Exotic Combo</span>
+                            <span class="item-price">&#8377;289</span>
+                        </div>
+                        <p class="combo-includes">Alfrado Pasta + Exotic Garlic Bread</p>
+                    </div>
+
+                    <div class="combo-item" style="border-color: var(--color-primary-green);">
+                        <div class="combo-header">
+                            <span class="combo-name">Jumbo Combo</span>
+                            <span class="item-price">&#8377;599</span>
+                        </div>
+                        <p class="combo-includes">Farm Fresh Pizza + Veggie Vibe Burger + French Fries + Slush Any 2nos
+                            + Classic Waffles</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer dark-bg" id="contact">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">SUTO <span class="star-symbol">&#10038;</span> CAFE</a>
+                <p>Premium Vibes,<br>Budget Prices</p>
+                <div class="social-links mt-2">
+                    <a href="https://instagram.com" target="_blank" class="social-icon">IG</a>
+                    <a href="https://facebook.com" target="_blank" class="social-icon">FB</a>
+                    <a href="https://wa.me/919663257373" target="_blank" class="social-icon">WA</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Visit Us <span class="star-symbol">&#10039;</span></h4>
+                <address>
+                    Ground Floor, No 8/9 Kousthubam<br>
+                    Dr. Vishnuvardhan Rd, Channasandra<br>
+                    Rajarajeshwari Nagar<br>
+                    Bengaluru, Karnataka 560098
+                </address>
+                <h4 class="mt-2">Near You <span class="star-symbol">&#10038;</span></h4>
+                <p>Close to Bangalore & Channasandra</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Open Hours <span class="star-symbol">&#10039;</span></h4>
+                <p>Monday - Sunday<br>Open until 11:00 PM</p>
+                <p class="mt-1"><i>We're always ready to serve you!</i></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Get In Touch <span class="star-symbol">&#10055;</span></h4>
+                <p><a href="tel:09663257373">096632 57373</a></p>
+                <p><a href="mailto:info@sutocafe.com">info@sutocafe.com</a></p>
+                <p><a href="https://sutocafe.com">sutocafe.com</a></p>
+
+                <h4 class="mt-2">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="review.html">Leave a Review &#9733;</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom container">
+            <p>&copy; <span class="copyright-year">2025</span> Suto Cafe. All rights reserved.</p>
+            <p>Made with &#10084;&#65039; in Bangalore</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+
+    <!-- Script goes here -->
+    <script src="script.js"></script>
+</body>
+
+</html>
