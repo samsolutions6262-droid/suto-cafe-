@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suto Cafe | Premium Vibes, Budget Prices</title>
+    <meta name="description"
+        content="Suto Cafe in RR Nagar. Premium ambience meets budget-friendly prices. Signature thick cold coffee, pasta, and pizzas near Bangalore & Channasandra.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Symbols Outlined -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <link rel="stylesheet" crossorigin href="./assets/style-BqwQVT-E.css">
+</head>
+
+<body>
+
+    <!-- Site Overlay (for modals/menus) -->
+    <div class="site-overlay" id="siteOverlay"></div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <button class="close-btn" id="closeSearch">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="search-container">
+            <input type="text" placeholder="Search our menu..." class="search-input">
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-btn" id="closeCart">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="cart-body">
+            <div class="empty-state">
+                <span class="material-symbols-outlined large-icon">shopping_cart</span>
+                <p>Your cart is empty! Order something delicious.</p>
+                <button class="btn btn-primary close-cart-cta">Browse Menu</button>
+            </div>
+            <!-- Cart Items would be injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal">
+                <span>Subtotal</span>
+                <span>₹0</span>
+            </div>
+            <a href="#menu" class="btn btn-primary full-width" style="text-decoration:none; text-align:center;">Browse
+                Menu</a>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="review.html" class="nav-link">Review Us</a>
+            </div>
+
+            <a href="#" class="logo center-logo">
+                <div class="logo-top">SUTO <span class="star-symbol">✺</span></div>
+                <div class="logo-bottom">& CAFE</div>
+            </a>
+
+            <div class="nav-right">
+                <div class="nav-actions">
+                    <button class="icon-circle-btn" id="openSearch">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                    <a href="menu.html" class="pill-btn" style="text-decoration: none;">
+                        <span class="material-symbols-outlined">storefront</span>
+                        Order
+                    </a>
+                    <button class="icon-circle-btn cart-btn-circle" id="openCart">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                        <span class="cart-badge-circle">0</span>
+                    </button>
+                </div>
+
+                <button class="hamburger-new" id="hamburger">
+                    <span class="hamburger-lines">
+                        <span></span>
+                        <span></span>
+                    </span>
+                    Menu
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">SUTO ✺ CAFE</div>
+            <button class="close-btn" id="closeMobileMenu">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+            <a href="review.html">Leave a Review ★</a>
+        </div>
+        <div class="mobile-social">
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://wa.me/919663257373" target="_blank">WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <video class="hero-bg-video" autoplay muted loop playsinline>
+            <source src="./assets/0306-CYvGhYJp.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <span class="subheading fade-up">Welcome to Suto Cafe</span>
+            <h1 class="hero-title fade-up align-center">
+                <span class="split-line">Your Perfect Hangout, <span class="star-symbol">✧</span></span>
+                <span class="split-line large-text"><span class="star-symbol-spin">✺</span> Premium Vibes,</span>
+                <span class="split-line large-text">Budget Prices</span>
+            </h1>
+
+            <div class="hero-stats fade-up">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="55">0+</span>
+                    <span class="stat-label">Google Reviews</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">5.0 ★</span>
+                    <span class="stat-label">Rating</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="1000">0+</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-cta animate-bounce">
+                Scroll <span class="material-symbols-outlined">arrow_downward</span>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Marquee Banner Section -->
+    <section class="marquee-section dark-banner-bg">
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <span class="marquee-text banner-text">Fresh <span class="star-symbol">✺</span> Tasty <span
+                        class="star-symbol">✧</span> Affordable <span class="star-symbol">✺</span> Cozy <span
+                        class="star-symbol">✧</span></span>
+                <span class="marquee-text banner-text">Fresh <span class="star-symbol">✺</span> Tasty <span
+                        class="star-symbol">✧</span> Affordable <span class="star-symbol">✺</span> Cozy <span
+                        class="star-symbol">✧</span></span>
+                <span class="marquee-text banner-text">Fresh <span class="star-symbol">✺</span> Tasty <span
+                        class="star-symbol">✧</span> Affordable <span class="star-symbol">✺</span> Cozy <span
+                        class="star-symbol">✧</span></span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span class="marquee-text banner-text">Fresh <span class="star-symbol">✺</span> Tasty <span
+                        class="star-symbol">✧</span> Affordable <span class="star-symbol">✺</span> Cozy <span
+                        class="star-symbol">✧</span></span>
+                <span class="marquee-text banner-text">Fresh <span class="star-symbol">✺</span> Tasty <span
+                        class="star-symbol">✧</span> Affordable <span class="star-symbol">✺</span> Cozy <span
+                        class="star-symbol">✧</span></span>
+                <span class="marquee-text banner-text">Fresh <span class="star-symbol">✺</span> Tasty <span
+                        class="star-symbol">✧</span> Affordable <span class="star-symbol">✺</span> Cozy <span
+                        class="star-symbol">✧</span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Full Image Section -->
+    <section class="hero-full-image" id="hero-image">
+        <img src="./assets/collage-CFxsYaYw.jpg" alt="Suto Cafe Menu and Vibe" class="full-width-hero-img">
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Story / Values Section -->
+        <section class="values section" id="about">
+            <div class="container grid-3">
+                <div class="value-card fade-up">
+                    <div class="value-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=500&auto=format&fit=crop"
+                            alt="Our Story" class="value-img parallax-img">
+                    </div>
+                    <h3 class="value-title">Our Story</h3>
+                    <p class="value-text">From a vision of creating the perfect college hangout to becoming RR Nagar's
+                        favorite spot. Premium ambience meets budget-friendly prices.</p>
+                </div>
+
+                <div class="value-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="value-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&auto=format&fit=crop"
+                            alt="Fresh & Delicious" class="value-img parallax-img">
+                    </div>
+                    <h3 class="value-title">Fresh & Delicious</h3>
+                    <p class="value-text">Every dish is crafted fresh with care. From our signature thick cold coffee to
+                        perfectly made pasta, taste the quality in every bite.</p>
+                </div>
+
+                <div class="value-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="value-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&auto=format&fit=crop"
+                            alt="Community Hub" class="value-img parallax-img">
+                    </div>
+                    <h3 class="value-title">Community Hub</h3>
+                    <p class="value-text">More than just a cafe, we're the go-to spot for Bangalore and Channasandra
+                        students. Where
+                        friendships grow, memories are made, and celebrations happen.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee 1: Flavors -->
+        <section class="marquee-section dark-bg">
+            <div class="marquee-wrapper">
+                <div class="marquee-content">
+                    <span class="marquee-text">Fresh <span class="star-symbol">✺</span> Tasty <span
+                            class="star-symbol">✧</span> Affordable <span class="star-symbol">✺</span> Cozy <span
+                            class="star-symbol">✧</span></span>
+                    <span class="marquee-text">Fresh <span class="star-symbol">✺</span> Tasty <span
+                            class="star-symbol">✧</span> Affordable <span class="star-symbol">✺</span> Cozy <span
+                            class="star-symbol">✧</span></span>
+                    <span class="marquee-text">Fresh <span class="star-symbol">✺</span> Tasty <span
+                            class="star-symbol">✧</span> Affordable <span class="star-symbol">✺</span> Cozy <span
+                            class="star-symbol">✧</span></span>
+                    <span class="marquee-text">Fresh <span class="star-symbol">✺</span> Tasty <span
+                            class="star-symbol">✧</span> Affordable <span class="star-symbol">✺</span> Cozy <span
+                            class="star-symbol">✧</span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Categories -->
+        <section class="menu-categories section" id="menu">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2 class="section-title">Flavors waiting to be explored</h2>
+                </div>
+
+                <div class="grid-4 categories-grid">
+                    <!-- Category 1 -->
+                    <a href="#beverages" class="category-card fade-up">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=500&auto=format&fit=crop"
+                                alt="Beverages" class="card-img">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Beverages</h4>
+                            <p class="card-subtitle">Signature Cold Coffee & More</p>
+                            <span class="card-cta">Menu <span
+                                    class="material-symbols-outlined small-icon">arrow_forward</span></span>
+                        </div>
+                    </a>
+
+                    <!-- Category 2 -->
+                    <a href="#italian" class="category-card fade-up" style="transition-delay: 0.1s;">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&auto=format&fit=crop"
+                                alt="Italian Delights" class="card-img">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Italian Delights</h4>
+                            <p class="card-subtitle">Authentic Pasta & Pizzas</p>
+                            <span class="card-cta">Menu <span
+                                    class="material-symbols-outlined small-icon">arrow_forward</span></span>
+                        </div>
+                    </a>
+
+                    <!-- Category 3 -->
+                    <a href="#sandwiches" class="category-card fade-up" style="transition-delay: 0.2s;">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&auto=format&fit=crop"
+                                alt="Sandwiches" class="card-img">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Sandwiches</h4>
+                            <p class="card-subtitle">Fresh & Flavorful</p>
+                            <span class="card-cta">Menu <span
+                                    class="material-symbols-outlined small-icon">arrow_forward</span></span>
+                        </div>
+                    </a>
+
+                    <!-- Category 4 -->
+                    <a href="#quick-bites" class="category-card fade-up" style="transition-delay: 0.3s;">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=500&auto=format&fit=crop"
+                                alt="Quick Bites" class="card-img">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Quick Bites</h4>
+                            <p class="card-subtitle">Perfect for Hangouts</p>
+                            <span class="card-cta">Menu <span
+                                    class="material-symbols-outlined small-icon">arrow_forward</span></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Split Section -->
+        <section class="quote-split section">
+            <div class="container split-layout">
+                <div class="split-left slide-in-left">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&auto=format&fit=crop"
+                        alt="Suto Cafe Team" class="split-img parallax-img">
+                </div>
+                <div class="split-right quote-content slide-in-right">
+                    <blockquote class="large-quote"
+                        style="font-style: italic; font-size: clamp(0.9rem, 1.2vw, 1.1rem);">
+                        "Great food, warm vibes, and unforgettable moments — all without breaking the bank."
+                    </blockquote>
+                    <p class="quote-author">— Suto Cafe Team</p>
+                    <a href="#about" class="text-cta">Our Story <span
+                            class="material-symbols-outlined small-icon">arrow_forward</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee 2 -->
+        <section class="marquee-section light-bg">
+            <div class="marquee-wrapper">
+                <div class="marquee-content reverse">
+                    <span class="marquee-text outlined">Near Bangalore <span class="star-symbol">✺</span> Near
+                        Channasandra <span class="star-symbol">✺</span> RR Nagar <span
+                            class="star-symbol">✺</span></span>
+                    <span class="marquee-text outlined">Near Bangalore <span class="star-symbol">✺</span> Near
+                        Channasandra <span class="star-symbol">✺</span> RR Nagar <span
+                            class="star-symbol">✺</span></span>
+                    <span class="marquee-text outlined">Near Bangalore <span class="star-symbol">✺</span> Near
+                        Channasandra <span class="star-symbol">✺</span> RR Nagar <span
+                            class="star-symbol">✺</span></span>
+                    <span class="marquee-text outlined">Near Bangalore <span class="star-symbol">✺</span> Near
+                        Channasandra <span class="star-symbol">✺</span> RR Nagar <span
+                            class="star-symbol">✺</span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Favorites -->
+        <section class="favorites section">
+            <div class="container">
+                <div class="section-header align-center fade-up">
+                    <h2 class="section-title">Our Most Loved Dishes</h2>
+                </div>
+
+                <div class="grid-4">
+                    <!-- Fav 1 -->
+                    <div class="product-card fade-up">
+                        <div class="product-img-wrapper">
+                            <img src="./assets/thick_cold_coffee-DdLF0Hhh.png" alt="Thick Cold Coffee" class="product-img">
+                            <span class="badge">Must try!</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="rating">
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                            </div>
+                            <h3 class="product-title">Thick Cold Coffee</h3>
+                            <p class="product-desc">Our Signature Drink</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹200</span>
+                                <button class="btn btn-secondary add-to-cart">Order Now <span
+                                        class="material-symbols-outlined small-icon">arrow_forward</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fav 2 -->
+                    <div class="product-card fade-up" style="transition-delay: 0.1s;">
+                        <div class="product-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&auto=format&fit=crop"
+                                alt="Pesto Sandwich" class="product-img">
+                            <span class="badge">Really good!</span>
+                        </div>
+                        <div class="product-info">
+                            <div class="rating">
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                            </div>
+                            <h3 class="product-title">Pesto & Cheese Sandwich</h3>
+                            <p class="product-desc">Fresh & Flavorful</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹250</span>
+                                <button class="btn btn-secondary add-to-cart">Order Now <span
+                                        class="material-symbols-outlined small-icon">arrow_forward</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fav 3 -->
+                    <div class="product-card fade-up" style="transition-delay: 0.2s;">
+                        <div class="product-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&auto=format&fit=crop"
+                                alt="Veg Overloaded Pizza" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <div class="rating">
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                            </div>
+                            <h3 class="product-title">Veg Overloaded Pizza</h3>
+                            <p class="product-desc">Perfectly Made Every Time</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹350</span>
+                                <button class="btn btn-secondary add-to-cart">Order Now <span
+                                        class="material-symbols-outlined small-icon">arrow_forward</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fav 4 -->
+                    <div class="product-card fade-up" style="transition-delay: 0.3s;">
+                        <div class="product-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500&auto=format&fit=crop"
+                                alt="Alfredo Spaghetti" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <div class="rating">
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                                <span class="material-symbols-outlined filled-star">star</span>
+                            </div>
+                            <h3 class="product-title">Alfredo Spaghetti</h3>
+                            <p class="product-desc">Creamy & Delicious</p>
+                            <div class="product-footer">
+                                <span class="product-price">₹300</span>
+                                <button class="btn btn-secondary add-to-cart">Order Now <span
+                                        class="material-symbols-outlined small-icon">arrow_forward</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beyond Cafe Section -->
+        <section class="beyond-cafe section dark-bg">
+            <div class="container split-layout reverse-mobile">
+                <div class="split-left fade-up">
+                    <h4 class="subheading">Where Friends Meet & Dreams Brew</h4>
+                    <h2 class="section-title large-title">Beyond A Cafe</h2>
+                    <p class="lead-text">Located near Bangalore and Channasandra, we're the perfect post-college
+                        hangout. Premium
+                        ambience, fast service, and budget-friendly prices make us RR Nagar's favorite spot.</p>
+                    <a href="#about" class="btn btn-primary mt-2">About Us <span
+                            class="material-symbols-outlined small-icon">arrow_forward</span></a>
+                </div>
+                <div class="split-right fade-up" style="transition-delay: 0.2s;">
+                    <div class="img-frame parallax">
+                        <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=800&auto=format&fit=crop"
+                            alt="Cafe Inter" class="parallax-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews List -->
+        <section class="reviews section" id="reviews">
+            <div class="container">
+                <div class="section-header align-center fade-up">
+                    <h2 class="section-title">Happy Customers</h2>
+                    <p class="subtitle">5.0 <span class="material-symbols-outlined filled-star">star</span> 55+ Google
+                        Reviews</p>
+                </div>
+
+                <div class="grid-3">
+                    <!-- Review 1 -->
+                    <div class="review-card fade-up">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <strong>Karan Kankani</strong>
+                                <span class="reviewer-badge">Local Guide</span>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                alt="Google" width="20">
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Really liked Suto Café in RR Nagar. The ambience feels premium but the
+                            prices are budget-friendly. Tried their pesto & cheese sandwich and thick cold coffee — both
+                            were really good."</p>
+                        <span class="review-date">2 weeks ago</span>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="review-card fade-up" style="transition-delay: 0.1s;">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <strong>Ruthu Bhardwaj</strong>
+                                <span class="reviewer-badge">Local Guide</span>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                alt="Google" width="20">
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Had a really good food experience at Suto Cafe. The veg overloaded pizza
+                            and Alfredo spaghetti were very tasty and properly made. Also loved the cold coffee and
+                            waffle."</p>
+                        <span class="review-date">1 week ago</span>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="review-card fade-up" style="transition-delay: 0.2s;">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <strong>Chiragdeep Singh</strong>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                alt="Google" width="20">
+                        </div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="review-text">"Sometimes the best places are found by accident. We randomly discovered
+                            this cozy café, and everything from the ambience to the food was just perfect. Super warm
+                            vibes."</p>
+                        <span class="review-date">2 weeks ago</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section class="map-section" id="location">
+            <div class="map-header">
+                <h2 class="map-title">Find Us Here</h2>
+                <p class="map-subtitle">Ground Floor, No 8/9 Kousthubam, Dr. Vishnuvardhan Rd, RR Nagar</p>
+            </div>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0!2d77.5!3d12.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzAwLjAiTiA3N8KwMzAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Suto Cafe Location">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+
+    <!-- Footer Section -->
+    <footer class="footer dark-bg" id="contact">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">SUTO <span class="star-symbol">✺</span> CAFE</a>
+                <p>Premium Vibes,<br>Budget Prices</p>
+                <div class="social-links mt-2">
+                    <a href="https://instagram.com" target="_blank" class="social-icon">IG</a>
+                    <a href="https://facebook.com" target="_blank" class="social-icon">FB</a>
+                    <a href="https://wa.me/919663257373" target="_blank" class="social-icon">WA</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Visit Us <span class="star-symbol">✧</span></h4>
+                <address>
+                    Ground Floor, No 8/9 Kousthubam<br>
+                    Dr. Vishnuvardhan Rd, Channasandra<br>
+                    Rajarajeshwari Nagar<br>
+                    Bengaluru, Karnataka 560098
+                </address>
+                <h4 class="mt-2">Near You <span class="star-symbol">✺</span></h4>
+                <p>Close to Bangalore & Channasandra</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Open Hours <span class="star-symbol">✧</span></h4>
+                <p>Monday - Sunday<br>Open until 11:00 PM</p>
+                <p class="mt-1"><i>We're always ready to serve you!</i></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Get In Touch <span class="star-symbol">❇</span></h4>
+                <p><a href="tel:09663257373">096632 57373</a></p>
+                <p><a href="mailto:info@sutocafe.com">info@sutocafe.com</a></p>
+                <p><a href="https://sutocafe.com">sutocafe.com</a></p>
+
+                <h4 class="mt-2">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="review.html">Leave a Review ★</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom container">
+            <p>&copy; <span class="copyright-year">2025</span> Suto Cafe. All rights reserved.</p>
+            <p>Made with ❤️ in Bangalore</p>
+        </div>
+    </footer>
+
+    <!-- Script goes here -->
+    <script src="script.js"></script>
+</body>
+
+</html>
