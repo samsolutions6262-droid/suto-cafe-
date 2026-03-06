@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Suto Cafe Website",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "npx vite",
+    "build": "npx vite build",
+    "preview": "npx vite preview"
   },
   "devDependencies": {
     "vite": "^5.0.0"
